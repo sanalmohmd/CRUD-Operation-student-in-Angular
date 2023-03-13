@@ -1,0 +1,71 @@
+<div class="title">
+    <h1>Student Register</h1>
+
+</div>
+
+<form [formGroup]="empForm" (ngSubmit)="savefn()">
+
+   <div class="Contant">
+        <div class="row">
+            <mat-form-field appearance="fill">
+                <mat-label>FirstName</mat-label>
+                <input matInput type="text" formControlName="firstname">
+              </mat-form-field>
+        
+              <mat-form-field appearance="fill">
+                <mat-label>LastName</mat-label >
+                <input matInput type="text" formControlName="lastname">
+              </mat-form-field>
+        
+        </div>
+        
+        <div class="row">
+        
+            <mat-form-field appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" formControlName="email">
+              </mat-form-field>
+        
+             
+              <mat-form-field appearance="fill">
+                <mat-label>DOB</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="dob">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+              
+              
+        </div>
+        
+        <div class="row">
+            <mat-radio-group aria-label="Select an option" formControlName="gen">
+                <mat-radio-button value="1">Male</mat-radio-button>
+                <mat-radio-button value="2">Female</mat-radio-button>
+                <mat-radio-button value="3">Other</mat-radio-button>
+              </mat-radio-group>
+        
+        </div>
+        
+        <div class="row">
+        
+            <mat-form-field appearance="fill">
+                <mat-label>Year</mat-label>
+                <input matInput formControlName="year">
+              </mat-form-field>
+        
+              <mat-form-field appearance="fill">
+                <mat-label>Department</mat-label>
+                <input matInput formControlName="department">
+              </mat-form-field>
+
+        </div>
+    </div>
+
+    <div class="action">
+        <button class="btn1" mat-raised-button color='primary' type="submit">Save</button >
+        <button mat-raised-button color='warn'>Cancel</button>
+    </div>
+
+
+</form>

@@ -1,0 +1,25 @@
+.Contant{
+    padding-top: 10px;
+
+}
+
+.row{
+    display: flex ;
+    gap:10px;
+}
+
+mat-form-field{
+    width: 100%;
+}
+
+.action{
+    padding: 0px 30px 15px;
+}
+
+button{
+    flex: 1;
+}
+
+.btn1{
+    padding: 1rem 3rem;
+}
